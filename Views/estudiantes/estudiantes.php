@@ -11,7 +11,7 @@
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal_estudiantes">
                         Nuevo Alumno
                     </button>
-                    
+
                     <table class="table text-nowrap mb-0 align-middle">
                         <thead class="text-dark fs-4">
                             <tr>
@@ -59,14 +59,11 @@
                 <div class="modal-body">
 
                     <input type="hidden" name="Id_estudiante" id="Id_estudiante">
-
                     <div class="form-group">
                         <label for="Cedula">Cedula del Estudiante</label>
-                        <input type="text" oninput="soloNumeros(event); validarCedula(); CedulaRepetida();  " required class="form-control" id="Cedula" name="Cedula" placeholder="Ingrese la cedula del Estudiante">
-                        <div class="alert alert-danger d-none" role="alert" id="errorCedula">
-                        </div>
-                        <div class="alert alert-danger d-none" role="alert" id="CedulaRepetida">
-                        </div>
+                        <input type="text" oninput="soloNumeros(event); validarCedula(); cedulaRepetida();" required class="form-control" id="Cedula" name="Cedula" placeholder="Ingrese la cedula del Estudiante">
+                        <div id="errorCedula" class="d-none"></div>
+                        <div id="CedulaRepetida" class="d-none"></div>
                     </div>
 
                     <div class="form-group">

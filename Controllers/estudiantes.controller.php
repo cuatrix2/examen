@@ -47,4 +47,12 @@ switch ($_GET['op']) {
         $datos = $estudiantes->eliminar($Id_estudiante);
         echo json_encode($datos);
         break;
+
+    case "cedula_repetida":
+        $Cedula = $_POST["Cedula"];
+        $datos = array(); //defino un arreglo
+        $datos = $estudiantes->cedula_repetida($Cedula); //llamo al modelo de usuarios e invoco al procedimiento uno y almaceno en una variable
+        $uno = mysqli_fetch_assoc($datos); //recorro el arreglo de datos
+        echo json_encode($uno); //devuelvo el arreglo en formato json
+        break;
 }

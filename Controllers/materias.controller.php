@@ -33,12 +33,12 @@ switch ($_GET['op']) {
         break;
     case 'actualizar':
         $Id_materia = $_POST['Id_materia'];
-        $Id_estudiante = $_POST['Id_estudiante'];
         $Nombre_materia = $_POST['Nombre_materia'];
+        $Id_estudiante = $_POST['Id_estudiante'];
         $Calificacion = $_POST['Calificacion'];
         $Fecha_examen = $_POST['Fecha_examen'];
         $datos = array();
-        $datos = $materias->actualizar($Id_materia, $Id_estudiante, $Nombre_materia, $Calificacion, $Fecha_examen);
+        $datos = $materias->actualizar($Id_materia, $Nombre_materia, $Id_materia, $Calificacion, $Fecha_examen);
         echo json_encode($datos);
         break;
     case 'eliminar':

@@ -91,13 +91,12 @@ var todos = () =>{
       { Id_materia: Id_materia },
       (res) => {
         res = JSON.parse(res);
+        console.log(res);
   
         $("#Id_materia").val(res.Id_materia);
         $("#Id_estudiante").val(res.Id_estudiante);
         //document.getElementById("PaisId").value = res.PaisesId
-        $("#Nombre").val(res.Nombre);
-        $("#Calificacion").val(res.Calificacion);
-        $("#Fecha_examen").val(res.Fecha_examen);
+       
       }
     );
     $("#Modal_materias").modal("show");

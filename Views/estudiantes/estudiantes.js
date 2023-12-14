@@ -181,7 +181,7 @@ var todos = () =>{
   function cedulaRepetida() {
     var cedula = $("#Cedula").val();
     $.post(
-      "../../Controllers/usuario.controller.php?op=cedula_repetida",
+      "../../Controllers/estudiantes.controller.php?op=cedula_repetida",
       { Cedula: cedula },
       (res) => {
         res = JSON.parse(res);

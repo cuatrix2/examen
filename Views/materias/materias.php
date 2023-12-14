@@ -63,7 +63,7 @@
                     <div class="form-group">
                         <label for="Id_estudiante"> Estudiante</label>
                         <select name="Id_estudiante" id="Id_estudiante" class="form-control">
-                            <option value="0">Seleccione un Estudiante</option>
+                        <option value="Nombre">Ariel Llerena</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -89,6 +89,8 @@
 
 <?php require_once('../html/script2.php') ?>
 <script src="materias.js"></script>
+<!--<script src="materias.controller.js"></script>
+<script src="materias.model.js"></script>-->
 
 <!--Solo numeros al ingresar la cedula-->
 <script>
