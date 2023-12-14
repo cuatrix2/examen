@@ -63,7 +63,7 @@
                     <div class="form-group">
                         <label for="Id_estudiante"> Estudiante</label>
                         <select name="Id_estudiante" id="Id_estudiante" class="form-control">
-                        <option value="Nombre">Ariel Llerena</option>
+                        <option value="0"></option>
                         </select>
                     </div>
                     <div class="form-group">
