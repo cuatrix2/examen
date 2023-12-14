@@ -18,8 +18,8 @@ switch ($_GET['op']) {
         $Id_materia = $_POST['Id_materia'];
         $datos = array();
         $datos = $materias->uno($Id_materia);
-        $uno = mysqli_fetch_assoc($datos);
-        echo json_encode($datos);
+       $uno = mysqli_fetch_assoc($datos);
+        echo json_encode($uno);
         break;
 
     case 'insertar':

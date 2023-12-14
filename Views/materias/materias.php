@@ -8,7 +8,7 @@
                 <h5 class="card-title fw-semibold mb-4">Lista de Materias</h5>
 
                 <div class="table-responsive">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal_materias">
+                    <button type="button" onclick="cargaEstudiantes()"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal_materias">
                         Agregar Asignatura
                     </button>
                     <table class="table text-nowrap mb-0 align-middle">
@@ -54,7 +54,7 @@
                 </div>
                 <div class="modal-body">
 
-                    <input type="hidden" name="Id_materia" id="Id_materia">
+                    <input type="hidden" name="Id_materia " id="Id_materia ">
 
                     <div class="form-group">
                         <label for="Nombre_materia">Materia</label>

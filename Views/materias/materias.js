@@ -41,8 +41,9 @@ var todos = () =>{
   var guardaryeditar = (e) => {
     e.preventDefault();
     var dato = new FormData($("#frm_materias")[0]);
+    console.log(dato,"hola");
     var ruta = "";
-    var Id_materia = document.getElementById("Id_materia").value;
+   var Id_materia = document.getElementById("Id_materia").value;
     if (Id_materia > 0) {
       ruta = "../../Controllers/materias.controller.php?op=actualizar";
 
@@ -85,6 +86,7 @@ var todos = () =>{
     });
   };
   var editar = async (Id_materia) => {
+    console.log("hola",Id_materia); 
     await cargaEstudiantes();
     $.post(
       "../../Controllers/materias.controller.php?op=uno",
@@ -92,9 +94,11 @@ var todos = () =>{
       (res) => {
         res = JSON.parse(res);
         console.log(res);
-  
         $("#Id_materia").val(res.Id_materia);
+        $("#Nombre_materia").val(res.Nombre_materia);
         $("#Id_estudiante").val(res.Id_estudiante);
+        $("#Calificacion").val(res.Calificacion);
+        $("#Fecha_examen").val(res.Fecha_examen);
         //document.getElementById("PaisId").value = res.PaisesId
        
       }
