@@ -62,7 +62,7 @@
 
                     <div class="form-group">
                         <label for="Cedula">Cedula del Estudiante</label>
-                        <input type="text" oninput="soloNumeros(event); validarCedula(); cedulaRepetida();  " required class="form-control" id="Cedula" name="Cedula" placeholder="Ingrese la cedula del Estudiante">
+                        <input type="text" oninput="soloNumeros(event); validarCedula(); CedulaRepetida();  " required class="form-control" id="Cedula" name="Cedula" placeholder="Ingrese la cedula del Estudiante">
                         <div class="alert alert-danger d-none" role="alert" id="errorCedula">
                         </div>
                         <div class="alert alert-danger d-none" role="alert" id="CedulaRepetida">
