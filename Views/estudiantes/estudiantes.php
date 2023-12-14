@@ -1,4 +1,4 @@
-<?php require_once('../html/head2.php')?>
+<?php require_once('../html/head2.php') ?>
 
 <div class="row">
 
@@ -11,6 +11,7 @@
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal_estudiantes">
                         Nuevo Alumno
                     </button>
+                    
                     <table class="table text-nowrap mb-0 align-middle">
                         <thead class="text-dark fs-4">
                             <tr>
@@ -30,7 +31,7 @@
                                     <h6 class="fw-semibold mb-0">Carrera</h6>
                                 </th>
                                 <th class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">Proemdio</h6>
+                                    <h6 class="fw-semibold mb-0">Promedio</h6>
                                 </th>
                                 <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Opciones</h6>
@@ -61,9 +62,13 @@
 
                     <div class="form-group">
                         <label for="Cedula">Cedula del Estudiante</label>
-                        <input type="text" oninput="soloNumeros(event);" required class="form-control" id="Cedula" name="Cedula" placeholder="Ingrese la cedula del Estudiante">
+                        <input type="text" oninput="soloNumeros(event); validarCedula(); cedulaRepetida();  " required class="form-control" id="Cedula" name="Cedula" placeholder="Ingrese la cedula del Estudiante">
+                        <div class="alert alert-danger d-none" role="alert" id="errorCedula">
+                        </div>
+                        <div class="alert alert-danger d-none" role="alert" id="CedulaRepetida">
+                        </div>
                     </div>
-                  
+
                     <div class="form-group">
                         <label for="nombre">Nombre del Estudiante</label>
                         <input type="text" oninput="soloLetras(event);" required class="form-control" id="Nombre" name="Nombre" placeholder="Ingrese el nombre del Estudiante">
@@ -71,19 +76,19 @@
 
                     <div class="form-group">
                         <label for="Edad">Edad del Estudiante</label>
-                        <input type="text"  oninput="soloNumeros(event);" required class="form-control" id="Edad" name="Edad" placeholder="Ingrese la Edad del Estudiante">
+                        <input type="text" oninput="soloNumeros(event);" required class="form-control" id="Edad" name="Edad" placeholder="Ingrese la Edad del Estudiante">
                     </div>
 
                     <div class="form-group">
                         <label for="Carrera">Carrera del Estudiante</label>
-                        <input type="text"  oninput="soloLetras(event);"  required class="form-control" id="Carrera" name="Carrera" placeholder="Ingrese la Carrera del Estudiante">
+                        <input type="text" oninput="soloLetras(event);" required class="form-control" id="Carrera" name="Carrera" placeholder="Ingrese la Carrera del Estudiante">
                     </div>
 
                     <div class="form-group">
                         <label for="Promedio">Promedio del Estudiante</label>
-                        <input type="text"  oninput="soloNumeros(event);" required class="form-control" id="Promedio" name="Promedio" placeholder="Ingrese el Promedio del Estudiante">
+                        <input type="text" oninput="soloNumeros(event);" required class="form-control" id="Promedio" name="Promedio" placeholder="Ingrese el Promedio del Estudiante">
                     </div>
-                
+
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Grabar</button>
@@ -110,9 +115,8 @@
         event.target.value = nuevoValor;
 
         // Llamar a otras funciones, como algoritmo_cedula y cedula_repetida, si es necesario
-    
+
     }
-    
 </script>
 <!--Solo letras al ingresar los nombres y apellidos-->
 <script>
@@ -127,4 +131,3 @@
         event.target.value = nuevoValor;
     }
 </script>
-

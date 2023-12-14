@@ -76,4 +76,18 @@ class Clase_Estudiantes
             $con->close();
         }
     }
+    public function cedula_repetida($Cedula)
+    {
+        try {
+            $con = new Clase_Conectar_Base_Datos();
+            $con = $con->ProcedimientoConectar();
+            $cadena = "SELECT count(*) as cedula_repetida FROM `estudiantes` WHERE `Cedula`= '$Cedula'";
+            $result = mysqli_query($con, $cadena);
+            return $result;
+        } catch (Throwable $th) {
+            return $th->getMessage();
+        } finally {
+            $con->close();
+        }
+    }
 }
