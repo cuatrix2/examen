@@ -54,16 +54,7 @@ class Clase_Materias
             $con = $con->ProcedimientoConectar();
             $cadena = "UPDATE `materias` SET `Nombre_materia`='$Nombre_materia', `Id_estudiante`='$Id_estudiante',`Calificacion`= '$Calificacion',`Fecha_examen`='$Fecha_examen' WHERE `Id_materia`='$Id_materia'";
             $result = mysqli_query($con, $cadena);
-            $params = array(
-                'Id_materia' => $Id_materia,
-                'Id_estudiante' => $Id_estudiante,
-                'Nombre_materia' => $Nombre_materia,
-                'Calificacion' => $Calificacion,
-                'Fecha_examen' => $Fecha_examen,
-            );
-    
-            return $params;
-           // return $result;
+            return 'ok';
         } catch (\Throwable $th) {
             return $th->getMessage();
         } finally {

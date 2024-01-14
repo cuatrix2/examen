@@ -41,7 +41,7 @@ var todos = () =>{
   var guardaryeditar = (e) => {
     e.preventDefault();
     var dato = new FormData($("#frm_materias")[0]);
-    console.log(dato,"hola");
+  
     var ruta = "";
    var Id_materia = document.getElementById("Id_materia").value;
     if (Id_materia > 0) {
@@ -86,7 +86,7 @@ var todos = () =>{
     });
   };
   var editar = async (Id_materia) => {
-    console.log("hola",Id_materia); 
+  
     await cargaEstudiantes();
     $.post(
       "../../Controllers/materias.controller.php?op=uno",
